@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 342654850}
   - component: {fileID: 342654849}
   m_Layer: 0
-  m_Name: Content (5)
+  m_Name: Update
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10215,7 +10215,7 @@ GameObject:
   - component: {fileID: 7124530815997773733}
   - component: {fileID: 7124530815997773734}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: loadingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17510,16 +17510,6 @@ MonoBehaviour:
     type: 3}
   sprite_Snow_Windy: {fileID: 7071256255630225466, guid: 448c696d65fe89a469b2a45f1623c40d,
     type: 3}
-  MapBase: {fileID: 7124530815968027307}
-  WeeklyBase: {fileID: 7124530816938089912}
-  loadingBar: {fileID: 7124530817164325088}
-  loadingText: {fileID: 7124530815997773734}
-  dateText: {fileID: 7124530817298580873}
-  popsText_pops: {fileID: 7124530816314947595}
-  popsText_date: {fileID: 7124530816974963526}
-  mapDate: {fileID: 7124530816511823018}
-  waitScreen: {fileID: 1287535150709852883}
-  updateNotify: {fileID: 342654847}
 --- !u!114 &7124530816318774193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21283,7 +21273,7 @@ GameObject:
   - component: {fileID: 7124530816566002555}
   - component: {fileID: 7124530816566002436}
   m_Layer: 0
-  m_Name: Content (1)
+  m_Name: Weekly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24422,7 +24412,7 @@ GameObject:
   - component: {fileID: 7124530816779900415}
   - component: {fileID: 7124530816779900408}
   m_Layer: 0
-  m_Name: Content (3)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24649,7 +24639,7 @@ GameObject:
   - component: {fileID: 7124530816792830929}
   - component: {fileID: 7124530816792830930}
   m_Layer: 0
-  m_Name: Content (0)
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27774,7 +27764,7 @@ GameObject:
   - component: {fileID: 7124530816995824477}
   - component: {fileID: 7124530816995824478}
   m_Layer: 0
-  m_Name: Content (2)
+  m_Name: Pops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30774,7 +30764,7 @@ GameObject:
   - component: {fileID: 7124530817164325094}
   - component: {fileID: 7124530817164325095}
   m_Layer: 0
-  m_Name: Image
+  m_Name: loadingBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31278,7 +31268,7 @@ GameObject:
   - component: {fileID: 7124530817188384710}
   - component: {fileID: 7124530817188384711}
   m_Layer: 0
-  m_Name: Content (4)
+  m_Name: Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
