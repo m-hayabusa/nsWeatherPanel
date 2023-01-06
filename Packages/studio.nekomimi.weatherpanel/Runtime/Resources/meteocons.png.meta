@@ -1,0 +1,461 @@
+fileFormatVersion: 2
+guid: 448c696d65fe89a469b2a45f1623c40d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8984144562621361035
+    second: meteocons_0
+  - first:
+      213: -140670175434087517
+    second: meteocons_1
+  - first:
+      213: -8005872665481486753
+    second: meteocons_2
+  - first:
+      213: 6680530433871996589
+    second: meteocons_3
+  - first:
+      213: -5615710234218650355
+    second: meteocons_4
+  - first:
+      213: 1284374046384637170
+    second: meteocons_5
+  - first:
+      213: 7071256255630225466
+    second: meteocons_6
+  - first:
+      213: 3986984044431344208
+    second: meteocons_7
+  - first:
+      213: -6335070554851971118
+    second: meteocons_8
+  - first:
+      213: 327344475228485032
+    second: meteocons_9
+  - first:
+      213: -6580094237646345689
+    second: meteocons_10
+  - first:
+      213: 7055290549193210611
+    second: meteocons_11
+  - first:
+      213: 298611956858121267
+    second: meteocons_12
+  - first:
+      213: 5171879983466789920
+    second: meteocons_13
+  - first:
+      213: -4489277069390799168
+    second: meteocons_14
+  - first:
+      213: 909773568087268659
+    second: meteocons_15
+  - first:
+      213: -638893996251584508
+    second: meteocons_16
+  - first:
+      213: 8257153990846711902
+    second: meteocons_17
+  - first:
+      213: -4361471531481902429
+    second: meteocons_18
+  - first:
+      213: 2119921175768247379
+    second: meteocons_19
+  - first:
+      213: -3611320186341773721
+    second: meteocons_20
+  - first:
+      213: 2355069860178274450
+    second: meteocons_21
+  - first:
+      213: -5817741964669312938
+    second: meteocons_22
+  - first:
+      213: -7553360825697533163
+    second: meteocons_23
+  - first:
+      213: -3055771076715732232
+    second: meteocons_24
+  - first:
+      213: -756915186606782317
+    second: meteocons_25
+  - first:
+      213: 8336040168318478608
+    second: meteocons_26
+  - first:
+      213: -924453110600217003
+    second: meteocons_27
+  - first:
+      213: -3007474424741038219
+    second: meteocons_28
+  - first:
+      213: 3516298853735231338
+    second: meteocons_29
+  - first:
+      213: -29159950615517564
+    second: meteocons_30
+  - first:
+      213: -5924933553933237829
+    second: meteocons_31
+  - first:
+      213: 3460476666410230312
+    second: meteocons_32
+  - first:
+      213: -5003898808509383072
+    second: meteocons_33
+  - first:
+      213: 8427540080165337508
+    second: meteocons_34
+  - first:
+      213: 8241774241110859533
+    second: meteocons_35
+  - first:
+      213: -8199903778190848607
+    second: meteocons_36
+  - first:
+      213: -8490190754101400484
+    second: meteocons_37
+  - first:
+      213: 802951199416376568
+    second: meteocons_38
+  - first:
+      213: 851246360329955707
+    second: meteocons_39
+  - first:
+      213: -539952173409647994
+    second: meteocons_40
+  - first:
+      213: 7062523848391241401
+    second: meteocons_41
+  - first:
+      213: 2618040005560500066
+    second: meteocons_42
+  - first:
+      213: 1513316345390926066
+    second: meteocons_43
+  - first:
+      213: -1488902972715670093
+    second: meteocons_44
+  - first:
+      213: -2364205108047227293
+    second: meteocons_45
+  - first:
+      213: -7056670656341656483
+    second: meteocons_46
+  - first:
+      213: 8442111426505263613
+    second: meteocons_47
+  - first:
+      213: 5894651686479643647
+    second: meteocons_48
+  - first:
+      213: -4999734897554312012
+    second: meteocons_49
+  - first:
+      213: -6094365239598459958
+    second: meteocons_50
+  - first:
+      213: -8483339154369170954
+    second: meteocons_51
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: meteocons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574523ece18e15380800000000000000
+      internalID: -8984144562621361035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a362c2883d3c0ef0800000000000000
+      internalID: -140670175434087517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e57f84a3d65e090800000000000000
+      internalID: -8005872665481486753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6602ed80306bc50800000000000000
+      internalID: 6680530433871996589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d052fd79b4df012b0800000000000000
+      internalID: -5615710234218650355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4cc79e36303d110800000000000000
+      internalID: 1284374046384637170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3039907916222260800000000000000
+      internalID: 7071256255630225466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0520b7d4ddc945730800000000000000
+      internalID: 3986984044431344208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteocons_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfe20f15ee4518a0800000000000000
+      internalID: -6335070554851971118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c564f11867ac6a44fa5a1f936da17635
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,56 @@
+{
+  "dependencies": {
+    "com.vrchat.clientsim": {
+      "version": "1.2.2"
+    },
+    "com.vrchat.core.vpm-resolver": {
+      "version": "0.1.17"
+    },
+    "com.vrchat.udonsharp": {
+      "version": "1.1.6"
+    },
+    "studio.nekomimi.parsevideo": {
+      "version": "1.0.2"
+    },
+    "com.anatawa12.vpm-package-auto-installer.creator": {
+      "version": "0.2.8"
+    }
+  },
+  "locked": {
+    "com.vrchat.clientsim": {
+      "version": "1.2.2",
+      "dependencies": {
+        "com.vrchat.worlds": "3.1.x"
+      }
+    },
+    "com.vrchat.worlds": {
+      "version": "3.1.10",
+      "dependencies": {
+        "com.vrchat.base": "3.1.x"
+      }
+    },
+    "com.vrchat.base": {
+      "version": "3.1.10",
+      "dependencies": {}
+    },
+    "com.vrchat.core.vpm-resolver": {
+      "version": "0.1.17",
+      "dependencies": {}
+    },
+    "com.vrchat.udonsharp": {
+      "version": "1.1.6",
+      "dependencies": {
+        "com.vrchat.worlds": "3.1.x"
+      }
+    },
+    "studio.nekomimi.parsevideo": {
+      "version": "1.0.3",
+      "dependencies": {
+        "com.vrchat.udonsharp": "1.1.6"
+      }
+    },
+    "com.anatawa12.vpm-package-auto-installer.creator": {
+      "version": "0.2.8"
+    }
+  }
+}
