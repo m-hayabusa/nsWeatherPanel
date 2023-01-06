@@ -44,7 +44,7 @@
       }
     },
     "studio.nekomimi.parsevideo": {
-      "version": "1.0.3",
+      "version": "1.0.4",
       "dependencies": {
         "com.vrchat.udonsharp": "1.1.6"
       }
