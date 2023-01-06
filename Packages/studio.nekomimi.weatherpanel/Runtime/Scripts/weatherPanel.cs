@@ -10,7 +10,7 @@ namespace nekomimiStudio.weatherPanel
 {
     public class weatherPanel : UdonSharpBehaviour
     {
-        public const string WEATHERPANEL_VERSION = "0.4.0";
+        public const string WEATHERPANEL_VERSION = "0.4.1";
 
         public Video2Str video2Str;
         public int location = 8;

@@ -12621,7 +12621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "https://nekomimi.studio v0.3.0\n\u6C17\u8C61\u5E81 https://jma.go.jp/bosai/forecast/data/forecast/010000.json
+  m_text: "https://nekomimi.studio v0.4.1\n\u6C17\u8C61\u5E81 https://jma.go.jp/bosai/forecast/data/forecast/010000.json
     \u3092\u5229\u7528\u30FB\u52A0\u5DE5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 273463f12850ea047bc2f2784347040e, type: 2}
