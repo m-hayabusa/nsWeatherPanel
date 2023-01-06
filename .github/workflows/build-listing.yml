@@ -72,6 +72,24 @@ jobs:
             fs.writeFileSync("${{env.pathToCi}}/vpm-repo/index.json", JSON.stringify(basepkg, undefined, "    "));
           '
 
+      - name: Add ? to end of url
+        run: >
+          node -e '
+            const fs = require("fs");
+            const repo = JSON.parse(fs.readFileSync("${{env.pathToCi}}/vpm-repo/index.json"));
+            for (let i = 0; i < Object.keys(repo.packages).length; i++){
+              const name = Object.keys(repo.packages)[i];
+              console.log(name);
+              for (let j = 0; j < Object.keys(repo.packages[name].versions).length; j++){
+                const version = Object.keys(repo.packages[name].versions)[j];
+                console.log(repo.packages[name].versions[version].url);
+                if (!repo.packages[name].versions[version].url.endsWith("?"))
+                  repo.packages[name].versions[version].url += "?";
+              }
+            }
+            fs.writeFileSync("${{env.pathToCi}}/vpm-repo/index.json", JSON.stringify(repo, undefined, "    "));
+          '
+
       - name: Get version and name
         run: >
           node -e '
