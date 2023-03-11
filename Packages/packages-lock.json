@@ -185,12 +185,6 @@
         "com.unity.textmeshpro": "2.1.6"
       }
     },
-    "studio.nekomimi.parsevideo": {
-      "version": "file:studio.nekomimi.parsevideo",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "studio.nekomimi.weatherpanel": {
       "version": "file:studio.nekomimi.weatherpanel",
       "depth": 0,

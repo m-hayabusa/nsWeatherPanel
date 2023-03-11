@@ -1207,7 +1207,7 @@ MonoBehaviour:
       Data: 56|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: nekomimiStudio.video2String.Parser, studio.nekomimi.parsevideo
+      Data: nekomimiStudio.weatherPanel.Parser, studio.nekomimi.weatherpanel
     - Name: 
       Entry: 8
       Data: 

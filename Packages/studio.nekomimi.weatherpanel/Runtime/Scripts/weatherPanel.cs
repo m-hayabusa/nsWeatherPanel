@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
-using nekomimiStudio.video2String;
 using VRC.SDK3.StringLoading;
 using VRC.SDKBase;
 
