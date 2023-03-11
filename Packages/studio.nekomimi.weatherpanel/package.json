@@ -1,7 +1,7 @@
 {
   "name": "studio.nekomimi.weatherpanel",
   "displayName": "nS weatherPanel",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "気象庁から取得した日本の天気予報を表示",
   "dependencies": {
   },
