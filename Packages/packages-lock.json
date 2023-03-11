@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.anatawa12.vpm-package-auto-installer.creator": {
-      "version": "file:com.anatawa12.vpm-package-auto-installer.creator",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "2.0.2"
-      }
-    },
     "com.unity.burst": {
       "version": "1.4.11",
       "depth": 1,
