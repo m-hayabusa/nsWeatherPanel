@@ -8065,7 +8065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7124530815894975178}
   - component: {fileID: 7124530815894975189}
-  - component: {fileID: 7124530815894975179}
+  - component: {fileID: 2905770353300949618}
   - component: {fileID: 7124530815894975188}
   m_Layer: 0
   m_Name: Audio
@@ -8189,7 +8189,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7124530815894975179
+--- !u!114 &2905770353300949618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17437,7 +17437,7 @@ GameObject:
   - component: {fileID: 7124530816318774198}
   - component: {fileID: 7124530816318774199}
   - component: {fileID: 7124530816318774192}
-  - component: {fileID: 7124530816318774196}
+  - component: {fileID: 3923244595292039036}
   - component: {fileID: 7124530816318774187}
   m_Layer: 0
   m_Name: weatherPanel
@@ -17494,7 +17494,8 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 7124530816318774193}
-  video2Str: {fileID: 0}
+  url:
+    url: https://tovrc.nekomimi.studio/weather.webm.txt
   location: 8
   sprite_Clear: {fileID: -8984144562621361035, guid: 448c696d65fe89a469b2a45f1623c40d,
     type: 3}
@@ -17612,7 +17613,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7124530816318774196
+--- !u!114 &3923244595292039036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
