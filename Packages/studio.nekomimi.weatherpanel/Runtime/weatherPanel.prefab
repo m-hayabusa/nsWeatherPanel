@@ -17497,7 +17497,7 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 7124530816318774193}
   url:
-    url: https://tovrc.nekomimi.studio/weather.webm.txt
+    url: https://gist.githubusercontent.com/m-hayabusa/84d63234e9f60df117cd3f836f87b938/raw/weather
   location: 8
   sprite_Clear: {fileID: -8984144562621361035, guid: 448c696d65fe89a469b2a45f1623c40d,
     type: 3}
