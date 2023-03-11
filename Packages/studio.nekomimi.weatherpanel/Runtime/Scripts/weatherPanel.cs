@@ -5,14 +5,17 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 using nekomimiStudio.video2String;
+using VRC.SDK3.StringLoading;
+using VRC.SDKBase;
 
 namespace nekomimiStudio.weatherPanel
 {
     public class weatherPanel : UdonSharpBehaviour
     {
-        public const string WEATHERPANEL_VERSION = "0.4.1";
+        public const string WEATHERPANEL_VERSION = "0.4.2";
 
-        public Video2Str video2Str;
+        public VRCUrl url;
+
         public int location = 8;
 
         public Sprite sprite_Clear;
@@ -41,7 +44,7 @@ namespace nekomimiStudio.weatherPanel
 
         void Start()
         {
-            parser = video2Str.getParser();
+            parser = this.GetComponent<Parser>();
             time = DateTime.Now;
             localTime = time.ToLocalTime();
             waitScreen = this.transform.Find("waitScreen").gameObject;
@@ -52,11 +55,9 @@ namespace nekomimiStudio.weatherPanel
             dateText = this.transform.Find("Panel/Time/Text (TMP)").GetComponent<TextMeshProUGUI>();
             popsText_date = this.transform.Find("Panel/Pops/date").GetComponent<TextMeshProUGUI>();
             popsText_pops = this.transform.Find("Panel/Pops/pops").GetComponent<TextMeshProUGUI>();
-
-#if UNITY_ANDROID
-            waitScreen.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "現在Questでは読み込み操作ができません。<br>PCユーザーの人がこのインスタンスに居るなら、<br>読み込んでもらえるように頼んでください。";
-#endif
         }
+
+        private bool isLoading = false;
 
         void Update()
         {
@@ -64,7 +65,7 @@ namespace nekomimiStudio.weatherPanel
 
             if (updateIttr % 5 == 0)
             {
-                if ((video2Str.isLoading() || parser.isDone()) && waitScreen.activeSelf)
+                if ((isLoading || parser.isDone()) && waitScreen.activeSelf)
                 {
                     waitScreen.SetActive(false);
                 }
@@ -80,8 +81,6 @@ namespace nekomimiStudio.weatherPanel
                         }
 
                         {
-                            localUpdate = video2Str.lastReload;
-
                             DateTime tmp;
 
                             DateTime.TryParse(parser.getString("meta", 0, "updated"), out tmp);
@@ -102,10 +101,10 @@ namespace nekomimiStudio.weatherPanel
                     loaded = parser.getCounter();
                 }
 
-                if (!parser.isDone() && video2Str.isLoading())
+                if (!parser.isDone() && isLoading)
                 {
                     loadingText.text = "LOADING...";
-                    progressbar(video2Str.getDecodeProgress());
+                    progressbar(0);
                 }
                 else
                 {
@@ -490,7 +489,17 @@ namespace nekomimiStudio.weatherPanel
             lastlocation = location;
         }
 
-        public void reload() { video2Str.reload(); }
+        public void reload() {
+            VRCStringDownloader.LoadUrl(url, (VRC.Udon.Common.Interfaces.IUdonEventReceiver)this);
+            isLoading = true;
+        }
+        public override void OnStringLoadSuccess(IVRCStringDownload result)
+        {
+            parser.reset();
+            parser.parse(result.Result);
+            isLoading = false;
+            localUpdate = DateTime.Now.ToLocalTime().ToString("yyyy/MM/dd HH:mm");
+        }
         public void onClick0() { location = 0; if (parser.isDone()) updateMapView(); }
         public void onClick1() { location = 1; if (parser.isDone()) updateMapView(); }
         public void onClick2() { location = 2; if (parser.isDone()) updateMapView(); }

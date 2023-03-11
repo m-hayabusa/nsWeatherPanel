@@ -5,7 +5,8 @@
         "VRC.SDKBase",
         "UdonSharp.Runtime",
         "Unity.TextMeshPro",
-        "studio.nekomimi.parsevideo"
+        "studio.nekomimi.parsevideo",
+        "VRC.Udon.Serialization.OdinSerializer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

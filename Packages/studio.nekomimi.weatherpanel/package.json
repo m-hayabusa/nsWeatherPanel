@@ -7,8 +7,8 @@
   },
   "gitDependencies": {},
   "vpmDependencies": {
-    "com.vrchat.udonsharp": "1.1.6",
-    "studio.nekomimi.parsevideo": "1.0.3"
+    "com.vrchat.udonsharp": "~1.1.7",
+    "studio.nekomimi.parsevideo": "~1.0.3"
   },
   "legacyFolders": {},
   "legacyFiles": {},
