@@ -1,4 +1,4 @@
-﻿
+
 using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
@@ -488,7 +488,8 @@ namespace nekomimiStudio.weatherPanel
             lastlocation = location;
         }
 
-        public void reload() {
+        public void reload()
+        {
             VRCStringDownloader.LoadUrl(url, (VRC.Udon.Common.Interfaces.IUdonEventReceiver)this);
             isLoading = true;
         }
