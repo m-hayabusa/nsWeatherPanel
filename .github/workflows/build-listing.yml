@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  listPublishDirectory: Website
+  vpmRepository: https://vpm.nekomimi.studio/index.json
   pathToCi: ci
 
 jobs:
@@ -33,30 +33,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3 # check out this repo
 
-      - uses: actions/checkout@v3 # check out automation repo
-        with:
-          repository: vrchat-community/package-list-action
-          path: ${{env.pathToCi}}/package-list-action
-          clean: false # otherwise the local repo will no longer be checked out
-
-      - uses: actions/checkout@v3
+      - name: m-hayabusa/vpm-repo
+        uses: actions/checkout@v3
         with:
           repository: m-hayabusa/vpm-repo
           path: ${{env.pathToCi}}/vpm-repo
           clean: false
-
-      - name: Restore Cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            ${{env.pathToCi}}/package-list-action/.nuke/temp
-            ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
-
-      - name: Build Package Version Listing
-        run: ${{env.pathToCi}}/package-list-action/build.cmd BuildRepoListing --root ${{env.pathToCi}}/package-list-action --list-publish-directory $GITHUB_WORKSPACE/${{env.listPublishDirectory}}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v3
         with:
@@ -66,41 +48,43 @@ jobs:
         run: >
           node -e '
             const fs = require("fs");
-            const newpkg = JSON.parse(fs.readFileSync("${{github.workspace}}/${{env.listPublishDirectory}}/index.json"));
-            const basepkg = JSON.parse(fs.readFileSync("${{env.pathToCi}}/vpm-repo/index.json"));
-            basepkg.packages[Object.keys(newpkg.packages)[0]] = newpkg.packages[Object.keys(newpkg.packages)[0]];
-            fs.writeFileSync("${{env.pathToCi}}/vpm-repo/index.json", JSON.stringify(basepkg, undefined, "    "));
-          '
 
-      - name: Add ? to end of url
-        run: >
-          node -e '
-            const fs = require("fs");
-            const repo = JSON.parse(fs.readFileSync("${{env.pathToCi}}/vpm-repo/index.json"));
-            for (let i = 0; i < Object.keys(repo.packages).length; i++){
-              const name = Object.keys(repo.packages)[i];
-              console.log(name);
-              for (let j = 0; j < Object.keys(repo.packages[name].versions).length; j++){
-                const version = Object.keys(repo.packages[name].versions)[j];
-                console.log(repo.packages[name].versions[version].url);
-                if (!repo.packages[name].versions[version].url.endsWith("?"))
-                  repo.packages[name].versions[version].url += "?";
-              }
-            }
-            fs.writeFileSync("${{env.pathToCi}}/vpm-repo/index.json", JSON.stringify(repo, undefined, "    "));
+            const package = JSON.parse(fs.readFileSync("./package.json"));
+            const basepkg = JSON.parse(fs.readFileSync("${{env.pathToCi}}/vpm-repo/index.json"));
+
+            package.url = "https://github.com/${{ github.repository }}/releases/download/" + package.version + "/" + package.name + "-" + package.version + ".zip?";
+
+            if (basepkg.packages[package.name] === undefined) basepkg.packages[package.name] = {};
+            if (basepkg.packages[package.name].versions === undefined) basepkg.packages[package.name].versions = {};
+            basepkg.packages[package.name].versions[package.version] = package;
+
+            fs.writeFileSync("${{env.pathToCi}}/vpm-repo/index.json", JSON.stringify(basepkg, undefined, "    "));
           '
 
       - name: Get version and name
         run: >
           node -e '
             const fs = require("fs");
-            const newpkg = JSON.parse(fs.readFileSync("${{github.workspace}}/${{env.listPublishDirectory}}/index.json"));
-            const name = Object.keys(newpkg.packages)[0];
-            const version = Object.keys(newpkg.packages[name].versions)[0];
-            const displayName = newpkg.packages[name].versions[version].displayName;
-            console.log("package_version=" + version);
-            console.log("package_displayName=" + displayName);
+            const package = JSON.parse(fs.readFileSync("./package.json"));
+            console.log("package_version=" + package.version);
+            console.log("package_displayName=" + package.displayName);
           ' >> $GITHUB_ENV
+
+      - name: Create installer
+        run: >
+          mkdir ${{env.pathToCi}}/vpmPackage;
+          wget https://github.com/anatawa12/VPMPackageAutoInstaller/releases/latest/download/creator.mjs -O ${{env.pathToCi}}/vpmPackage/creator.mjs;
+          node -e '
+            const fs = require("fs");
+            const package = JSON.parse(fs.readFileSync("./package.json"));
+            const config = {};
+            config.vpmRepositories = ["${{env.vpmRepository}}"];
+            config.vpmDependencies = package.vpmDependencies;
+            if (config.vpmDependencies == undefined) config.vpmDependencies = {};
+            config.vpmDependencies[package.name] = package.version;
+            fs.writeFileSync("${{env.pathToCi}}/vpmPackage/config.json", JSON.stringify(config));
+          ';
+          node ${{env.pathToCi}}/vpmPackage/creator.mjs ${{env.pathToCi}}/vpmPackage/config.json "${{env.pathToCi}}/vpm-repo/installer/${{env.package_displayName}}-installer.unitypackage";
 
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
