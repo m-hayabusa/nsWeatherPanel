@@ -3,8 +3,11 @@
   "displayName": "nS weatherPanel",
   "version": "0.4.3",
   "description": "気象庁から取得した日本の天気予報を表示",
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-hayabusa/nsWeatherPanel.git"
   },
+  "dependencies": {},
   "gitDependencies": {},
   "vpmDependencies": {
     "com.vrchat.udonsharp": "~1.1.7"
