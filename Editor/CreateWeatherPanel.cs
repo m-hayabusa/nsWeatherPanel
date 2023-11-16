@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using UnityEngine.EventSystems;
+using System.Linq;
 
 namespace nekomimiStudio.weatherPanel
 {
@@ -12,6 +14,13 @@ namespace nekomimiStudio.weatherPanel
             GameObject res = (GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefab);
             GameObjectUtility.SetParentAndAlign(res, (GameObject)menu.context);
             Undo.RegisterCreatedObjectUndo(res, "weatherPanel");
+            var eventSystems = Resources.FindObjectsOfTypeAll<EventSystem>().Where(e => (e.hideFlags & HideFlags.HideInHierarchy) == 0);
+            if (!eventSystems.Any())
+            {
+                var eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+                Undo.RegisterCreatedObjectUndo(eventSystem, "EventSystem");
+            }
+
             Selection.activeObject = res;
         }
     }
