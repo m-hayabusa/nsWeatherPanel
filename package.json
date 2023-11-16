@@ -9,6 +9,7 @@
   "vpmDependencies": {
     "com.vrchat.udonsharp": "~1.1.7"
   },
+  "license": "BSD 1-Clause",
   "legacyFolders": {},
   "legacyFiles": {},
   "author": {
